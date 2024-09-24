@@ -1,0 +1,10 @@
+// Import global variables and mixins
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+// Import reset and base styles
+@import './base/reset';
+
+// Import themes
+@import './themes/light-theme';
+@import './themes/dark-theme';

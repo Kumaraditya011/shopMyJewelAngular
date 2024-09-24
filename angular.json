@@ -27,8 +27,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "./projects/merchant-dashboard-lib/**/*"
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"

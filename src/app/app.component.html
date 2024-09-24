@@ -1,9 +1,11 @@
-<header>
-    Header
-</header>
-<main>
-    <router-outlet></router-outlet>
-</main>
-<footer>
-    Footer
-</footer>
+<section [ngClass]="{'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme}">
+    <header>
+        <app-header></app-header>
+    </header>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+    <footer>
+        Footer
+    </footer>
+</section>

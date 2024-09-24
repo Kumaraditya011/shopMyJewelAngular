@@ -1,0 +1,22 @@
+// Mixin for responsive breakpoints
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == xs {
+      @media (max-width: $screen-xs) { @content; }
+    } @else if $breakpoint == sm {
+      @media (max-width: $screen-sm) { @content; }
+    } @else if $breakpoint == md {
+      @media (max-width: $screen-md) { @content; }
+    } @else if $breakpoint == lg {
+      @media (max-width: $screen-lg) { @content; }
+    } @else if $breakpoint == xl {
+      @media (max-width: $screen-xl) { @content; }
+    }
+  }
+  
+  
+  // Font-size mixin
+  @mixin font-size($size) {
+    font-size: $size;
+    line-height: 1.5;
+  }
+  
