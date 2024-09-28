@@ -1,3 +1,4 @@
+@import './screen-size';
 // Mixin for responsive breakpoints
 @mixin respond-to($breakpoint) {
     @if $breakpoint == xs {

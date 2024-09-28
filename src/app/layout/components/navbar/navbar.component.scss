@@ -1,0 +1,62 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: $light-pink;
+    color: $white;
+
+    .navbar-left {
+        .logo {
+            width: 150px;
+        }
+    }
+
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        
+        button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $light-brown;
+            margin-left: 20px;
+            font-size: 14px;
+            text-transform: none;
+
+            .icon {
+                color: $light-brown;
+                font-size: 24px;
+                margin-bottom: 5px;
+                margin-top: 15px;
+                line-height: 0;
+                overflow: visible;
+            }
+
+            .menu-text {
+                font-size: 12px;
+            }
+
+            &:hover {
+                color: darkbrown;
+            }
+        }
+    }
+}
+
+@include respond-to(sm) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-right {
+        button {
+            margin-bottom: 10px;
+        }
+    }
+}

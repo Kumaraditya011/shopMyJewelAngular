@@ -1,0 +1,49 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+.header {
+    width: 100%;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: $skyblue;
+    align-items: center;
+    font-size: 15px;
+    color: $dark-charcoal;
+
+    mat-icon {
+        font-size: 20px;
+        margin-right: 1px;
+        color: $dark-charcoal;
+    }
+
+    .topbar-left {
+        display: flex;
+        span {
+            margin-right: 15px;
+        }
+    }
+
+    .topbar-right {
+        display: flex;
+        align-items: center;
+        span {
+            font-size: 14px;
+            color: $dark-charcoal;
+        }
+
+        .gold-price {
+            margin-left: 15px;
+        }
+    }
+}
+
+@include respond-to(sm) {
+    .topbar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
