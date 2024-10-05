@@ -1,68 +1,88 @@
-@import 'abstracts/variables.scss';
-@import 'abstracts/mixins.scss';
+@import '../../../../../../src/styles/abstracts/variables.scss';
+@import '../../../../../../src/styles/abstracts/mixins.scss';
 
 .product-banner {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 
   .banner-image {
     width: 100%;
     height: auto;
     max-height: 300px;
-    object-fit: cover; /* Ensures image fits within the defined height */
+    object-fit: cover; // Ensures the image fits within the defined height
   }
 }
 
 .product-info {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; // Distributes space between children
+  align-items: center; // Aligns items vertically
   padding: 20px;
   background-color: $white-smoke;
   border-radius: 8px;
 
-  .phone-number {
-    display: flex;
-    align-items: center;
+  .contact-info {
+    display: flex; // Align phone numbers and social media icons in a row
+    align-items: center;// Aligns to the right
 
-    mat-icon {
-      margin-right: 10px;
-      color: $black;
-    }
+    .phone-numbers {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px; // Space between phone numbers and social media icons
 
-    span {
-      font-size: 18px;
-      font-weight: bold;
-      color: $dark-charcoal;
-    }
-  }
-
-  .social-media {
-    display: flex;
-    align-items: center;
-
-    a {
-      margin-left: 15px;
       mat-icon {
-        font-size: 24px;
-        color: $davy-grey;
-        transition: color 0.3s;
-      }
-      &:hover mat-icon {
         color: $black;
+        font-size: 16px;
+        margin-right: 8px; // Adds spacing between icon and phone numbers
+      }
+
+      ul {
+        list-style: none; // Removes default list styles
+        padding: 0; // Removes padding
+        margin: 0; // Removes margin
+        display: flex; // Aligns phone numbers in a row
+        gap: 10px; // Space between phone numbers
+
+        li {
+          font-size: 14px;
+          font-weight: bold;
+          color: $dark-charcoal;
+          padding: 0 4px; // Adjusts padding for phone numbers
+        }
+      }
+    }
+
+    .social-media {
+      display: flex;
+      gap: 15px; // Better spacing using gap property
+
+      a {
+        mat-icon {
+          font-size: 24px;
+          color: $davy-grey;
+          transition: color 0.3s;
+        }
+
+        &:hover mat-icon {
+          color: $black; // Change color on hover
+        }
       }
     }
   }
 }
 
+// Media queries for responsiveness
 @include respond-to(sm) {
   .product-info {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; // Stacks elements on smaller screens
+    align-items: flex-start; // Aligns items to the left
+
+    .contact-info {
+      align-items: flex-start; // Aligns contact info to the left
+    }
 
     .social-media {
-      margin-top: 15px;
+      margin-top: 15px; // Adds spacing above social media icons
     }
   }
 }

@@ -1,22 +1,29 @@
-<div class="product-banner">
-  <img src="assets/banner.jpg" alt="Banner Image" class="banner-image" />
-</div>
+<section class="product-banner">
+  <img src="assets/images/jeweller-cover-photo.png" alt="Jeweller banner" class="banner-image" />
+</section>
 
-<div class="product-info">
-  <div class="phone-number">
-    <mat-icon aria-label="Phone">phone</mat-icon>
-    <span aria-label="Phone Number">+1 234 567 890</span>
-  </div>
+<section class="product-info" aria-labelledby="product-info-heading">
+  <img src="assets/images/profile-pic.png" alt="profile" class="profile-image" />
 
-  <div class="social-media">
-    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-      <mat-icon>facebook</mat-icon>
-    </a>
-    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-      <mat-icon>twitter</mat-icon>
-    </a>
-    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-      <mat-icon>instagram</mat-icon>
-    </a>
+  <div class="contact-info">
+    <div class="phone-numbers">
+      <mat-icon aria-hidden="true">phone</mat-icon>
+      <ul aria-label="Phone numbers">
+        <li>
+          <span aria-hidden="true">+1 234 567 890</span>
+        </li>
+        <li>
+          <span aria-hidden="true">+1 234 567 891</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="social-media" aria-label="Social Media Links">
+      <ng-container *ngFor="let social of socialMediaLinks">
+        <a [href]="social.url" target="_blank" [attr.aria-label]="social.label">
+          <mat-icon [svgIcon]="social.icon" aria-hidden="true"></mat-icon>
+        </a>
+      </ng-container>
+    </div>
   </div>
-</div>
+</section>

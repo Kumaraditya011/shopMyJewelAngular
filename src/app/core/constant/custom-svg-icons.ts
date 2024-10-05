@@ -1,4 +1,7 @@
 export const customIcons: Array<[string, string]> = [
-    ['facebook', 'assets/svgImages/assignments.svg'],
-    ['instagram', 'assets/svgImages/link.svg']
-];  
+    ['logo', 'assets/images/svg/logo.svg'],
+    ['facebook', 'assets/images/svg/Facebook-Circled.svg'],
+    ['instagram', 'assets/images/svg/Instagram-Circle.svg'],
+    ['twitter', 'assets/images/svg/twitter.svg'],
+    ['YouTube', 'assets/images/svg/YouTube.svg']
+];
