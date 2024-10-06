@@ -2,28 +2,81 @@
   <img src="assets/images/jeweller-cover-photo.png" alt="Jeweller banner" class="banner-image" />
 </section>
 
-<section class="product-info" aria-labelledby="product-info-heading">
-  <img src="assets/images/profile-pic.png" alt="profile" class="profile-image" />
+<section class="merchant-dashboard">
+  <!-- Social and Contact Information -->
+  <section class="merchant-social-info" aria-labelledby="merchant-social-heading">
+    <img src="assets/images/profile-pic.png" alt="Profile of Merchant" class="profile-image" />
 
-  <div class="contact-info">
-    <div class="phone-numbers">
-      <mat-icon aria-hidden="true">phone</mat-icon>
-      <ul aria-label="Phone numbers">
-        <li>
-          <span aria-hidden="true">+1 234 567 890</span>
+    <div class="contact-info">
+      <div class="phone-numbers">
+        <mat-icon aria-hidden="true">phone</mat-icon>
+        <ul aria-label="Phone numbers">
+          <li>
+            <span aria-hidden="true">+1 234 567 890</span>
+          </li>
+          <li>
+            <span aria-hidden="true">+1 234 567 891</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="social-media" aria-label="Social Media Links">
+        <ng-container *ngFor="let social of socialMediaLinks">
+          <a [href]="social.url" target="_blank" [attr.aria-label]="social.label">
+            <mat-icon [svgIcon]="social.icon" aria-hidden="true"></mat-icon>
+          </a>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+
+  <!-- Merchant Details -->
+  <section class="merchant-details" aria-labelledby="merchant-details-heading">
+    <div class="merchant-address">
+      <ul>
+        <li><strong>ID:</strong> JIA0001</li>
+        <li><strong>Verified with</strong>
+          <ul class="verification-icons">
+            <li><mat-icon svgIcon="email-brown"></mat-icon></li>
+            <li><mat-icon svgIcon="phone-brown"></mat-icon></li>
+            <li><mat-icon svgIcon="address"></mat-icon></li>
+            <li><mat-icon svgIcon="facebook"></mat-icon></li>
+          </ul>
         </li>
-        <li>
-          <span aria-hidden="true">+1 234 567 891</span>
-        </li>
+        <li><strong>License No.-</strong> BS452</li>
+        <li><strong>Address-</strong> New York</li>
+        <li><strong>Product-</strong> 112 <span><mat-icon svgIcon="share"></mat-icon></span></li>
       </ul>
     </div>
 
-    <div class="social-media" aria-label="Social Media Links">
-      <ng-container *ngFor="let social of socialMediaLinks">
-        <a [href]="social.url" target="_blank" [attr.aria-label]="social.label">
-          <mat-icon [svgIcon]="social.icon" aria-hidden="true"></mat-icon>
-        </a>
+    <div class="merchant-descriptions">
+      <h1>Tory Jewellers</h1>
+      <p>
+        We are the most famous Jewellers in New York with three more branches across the city.
+        Our expansion is ongoing worldwide, and we are committed to providing exceptional quality.
+
+        We are the most famous Jewellers in New York with three more branches across the city.
+        Our expansion is ongoing worldwide, and we are committed to providing exceptional quality.
+        <br/> <br/>
+        We are the most famous Jewellers in New York with three more branches across the city.
+        Our expansion is ongoing worldwide, and we are committed to providing exceptional quality.
+      </p>
+    </div>
+  </section>
+  <section class="merchant-tabs">
+    <ul *ngFor="let tab of tabs">
+      <li>
+        <button mat-raised-button [ngClass]="['merchant-action-button', tab.className]" (click)="switchTab(tab)">
+          {{tab.label}}
+        </button>
+      </li>
+    </ul>
+  </section>
+  <section class="merchant-product-lists">
+    <div class="product-grid">
+      <ng-container *ngFor="let product of products">
+        <lib-product-list [product]="product"></lib-product-list>
       </ng-container>
     </div>
-  </div>
+  </section>
 </section>

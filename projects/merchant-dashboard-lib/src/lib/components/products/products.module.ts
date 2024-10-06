@@ -1,7 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
 import { ProfileComponent } from '../profile/profile.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
@@ -20,8 +24,12 @@ import { ProductsComponent } from './products.component';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     ProductsRoutingModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatTabsModule,
+    MatCardModule
   ]
 })
 export class ProductsModule { }
