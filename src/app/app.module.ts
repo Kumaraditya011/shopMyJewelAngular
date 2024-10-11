@@ -13,6 +13,7 @@ import { CoreModule } from './core/core.module';
 import { IconService } from './core/services/icon.service';
 import { LayoutModule } from './layout/layout.module';
 import { SharedModule } from './shared/shared.module';
+import { ProfileModule } from 'projects/merchant-dashboard-lib/src/lib/components/profile/profile.module';
 
 export function loadEnvConfig(environmentService: EnvironmentService): () => Promise<any> {
   return () => environmentService.loadEnvironmentConfig();
@@ -31,7 +32,8 @@ export function loadEnvConfig(environmentService: EnvironmentService): () => Pro
     ProductsModule,
     RouterModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    ProfileModule
   ],
   providers: [
     {
