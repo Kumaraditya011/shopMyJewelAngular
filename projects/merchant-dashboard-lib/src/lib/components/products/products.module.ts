@@ -29,7 +29,7 @@ import { ProductsComponent } from './products.component';
     MatIconModule,
     MatButtonModule,
     MatTabsModule,
-    MatCardModule
+    MatCardModule,
   ]
 })
 export class ProductsModule { }

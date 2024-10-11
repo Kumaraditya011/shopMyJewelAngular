@@ -1,1 +1,140 @@
-<p>edit-profile works!</p>
+<div class="container">
+    <div class="profile-section">
+        <div class="profile-picture">
+            <img [src]="profilePhoto" alt="Profile Photo" class="profile-photo">
+
+            <!-- Container for buttons -->
+            <div class="button-group">
+                <button mat-button color="primary" (click)="fileInput.click()" matTooltip="Upload Profile Photo"
+                    matTooltipPosition="above">
+                    Upload Profile Photo
+                </button>
+                <button mat-icon-button color="warn" (click)="onDeleteProfilePhoto()" matTooltip="Remove Profile Photo"
+                    matTooltipPosition="above">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+            <input type="file" accept="image/*" #fileInput (change)="onProfilePhotoSelected($event)" hidden>
+        </div>
+
+
+        <h3>{{ shopName }}</h3>
+
+        <!-- Locate your shop -->
+        <div class="locate-shop">
+            <img src="assets/map_placeholder.png" alt="map">
+            <button mat-button color="primary">
+                Locate your shop
+            </button>
+        </div>
+
+        <!-- Favorite Ad list, Products in draft -->
+        <div class="additional-options">
+            <a href="#">Favourite Ad list</a>
+            <a href="#">Products in draft</a>
+        </div>
+
+        <!-- Address Section -->
+        <mat-form-field class="full-width">
+            <mat-label>Address</mat-label>
+            <textarea matInput [(ngModel)]="address" name="address"></textarea>
+        </mat-form-field>
+
+        <!-- Log out, Delete Account buttons -->
+        <div class="action-buttons">
+            <a href="#" mat-button color="warn">Log out</a>
+            <a href="#" mat-button color="warn">DELETE MY ACCOUNT</a>
+        </div>
+    </div>
+
+    <!-- Form Fields Section -->
+    <div class="form-section">
+        <!-- Shop Name -->
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Shop Name</mat-label>
+            <input matInput [(ngModel)]="shopName" name="shopName">
+        </mat-form-field>
+
+        <!-- License No -->
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>License No.</mat-label>
+            <input matInput [(ngModel)]="licenseNo" name="licenseNo">
+        </mat-form-field>
+
+        <!-- Upload cover image -->
+        <div class="cover-image-section">
+            <!-- Upload Cover Image Button and Preview -->
+            <div class="cover-image-upload">
+                <img [src]="coverImage" alt="Cover Image" *ngIf="coverImage" class="cover-image-preview">
+
+                <button mat-raised-button color="primary" (click)="coverFileInput.click()">
+                    Upload cover image
+                </button>
+
+                <input type="file" accept="image/*" #coverFileInput (change)="onCoverImageSelected($event)" hidden>
+            </div>
+        </div>
+
+        <!-- Email -->
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="email" name="email">
+        </mat-form-field>
+
+        <!-- Phone Number -->
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Phone No.</mat-label>
+            <input matInput [(ngModel)]="phoneNumber" name="phoneNumber">
+        </mat-form-field>
+
+        <!-- Place -->
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Place</mat-label>
+            <!-- <mat-select [(ngModel)]="place" name="place">
+                <mat-option value="Kapurthala">Kapurthala</mat-option>
+                <mat-option value="Other">Other</mat-option>
+            </mat-select> -->
+            <input matInput [(ngModel)]="place" name="place">
+        </mat-form-field>
+
+        <!-- Social Media Links Section -->
+        <!-- Social Media Links Section -->
+        <div class="social-media-section">
+            <h3>Social Media Links</h3>
+
+            <mat-form-field appearance="fill" class="social-media-field">
+                <mat-icon matPrefix><i class="fab fa-facebook"></i></mat-icon>
+                <input matInput [(ngModel)]="socialMedia.facebook" name="facebook" placeholder="Facebook">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="social-media-field">
+                <mat-icon matPrefix><i class="fab fa-instagram"></i></mat-icon>
+                <input matInput [(ngModel)]="socialMedia.instagram" name="instagram" placeholder="Instagram">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="social-media-field">
+                <mat-icon matPrefix><i class="fab fa-youtube"></i></mat-icon>
+                <input matInput [(ngModel)]="socialMedia.youtube" name="youtube" placeholder="YouTube">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="social-media-field">
+                <mat-icon matPrefix><i class="fas fa-globe"></i></mat-icon>
+                <input matInput [(ngModel)]="socialMedia.website" name="website" placeholder="Website">
+            </mat-form-field>
+        </div>
+
+
+
+        <!-- Description -->
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput [(ngModel)]="description" name="description"></textarea>
+        </mat-form-field>
+
+        <!-- Save, Cancel buttons -->
+        <div class="action-buttons">
+            <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+            <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+        </div>
+    </div>
+</div>
