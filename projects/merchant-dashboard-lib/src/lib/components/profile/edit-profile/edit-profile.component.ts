@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../../../services/profile.service';
+import { FileUploadService } from '../../../services/file-upload.service';
 
 @Component({
   selector: 'lib-edit-profile',
@@ -25,7 +26,8 @@ export class EditProfileComponent implements OnInit {
   description: string = `We are the most famous jewellers in Karnataka.`;
   coverImage: string = '';
   constructor(
-    private profileService: ProfileService
+    private profileService: ProfileService,
+    private fileUploadService: FileUploadService
   ) { }
   ngOnInit() {
 
@@ -66,14 +68,35 @@ export class EditProfileComponent implements OnInit {
     console.log('Delete profile photo clicked');
   }
   onProfilePhotoSelected(event: any) {
-    const file = event.target.files[0]; // Get the selected file
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        this.profilePhoto = e.target.result; // Update profilePhoto with the image preview
-      };
-      console.log("this.profilePhoto", this.profilePhoto);
-      reader.readAsDataURL(file); // Read the file as a data URL for image preview
+    // const file = event.target.files[0]; 
+    // if (file) {
+    //   const reader = new FileReader();
+    //   reader.onload = (e: any) => {
+    //     this.profilePhoto = e.target.result;
+    //   };
+    //   console.log("this.profilePhoto", this.profilePhoto);
+    //   reader.readAsDataURL(file); 
+    // }
+
+    console.log(" event.target.files", event.target.files);
+    console.log(" event.target.files[0]", event.target.files[0]);
+    const file = event.target.files[0];
+    if (event.target.files && event.target.files[0]) {
+      let files = [], total_files_uploaded = 0;
+      files = event.target.files
+      for (let index = 0; index < files.length; index++) {
+        const file = files[index];
+        let res={
+          file
+        }
+        res.file = file
+          this.fileUploadService.uploadFileToS3(res,index).subscribe((res:any)=>{
+            console.log("res after file upload",res);
+          },err=>{
+            console.log("err after file upload",err);
+
+          })
+      }
     }
   }
   onCoverImageSelected(event: any) {
