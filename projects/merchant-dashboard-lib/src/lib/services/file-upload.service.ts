@@ -6,11 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FileUploadService {
-// environment={
-//        production: false,
-//        accesskeyyy : 'AKIA42X4NKH4WPPOT4XF',
-//        secretkeyyy : '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'
-// }
+
   constructor() { }
 
   uploadFileToS3(options: any, index: any): Observable<any> {
