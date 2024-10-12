@@ -6,18 +6,18 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FileUploadService {
-environment={
-       production: false,
-       accesskey : 'AKIA42X4NKH4WPPOT4XF',
-       secretkey : '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'
-}
+// environment={
+//        production: false,
+//        accesskeyyy : 'AKIA42X4NKH4WPPOT4XF',
+//        secretkeyyy : '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'
+// }
   constructor() { }
 
   uploadFileToS3(options: any, index: any): Observable<any> {
     return new Observable(observer => {
       const s3 = new S3({
-        secretAccessKey: this.environment.secretkey,
-        accessKeyId: this.environment.accesskey,
+        // secretAccessKey: this.environment.secretkeyyy,
+        // accessKeyId: this.environment.accesskeyyy,
         region: 'ap-south-1'
       });
 
