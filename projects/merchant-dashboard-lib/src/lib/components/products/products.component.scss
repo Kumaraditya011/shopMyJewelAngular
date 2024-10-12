@@ -154,6 +154,55 @@
       padding: 20px;
     }
   }
+
+  .merchant-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .footer-left {
+    h3 {
+      font-size: 20px;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+  
+    .branches {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  
+    .branch {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+  
+      .branch-name {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+      }
+  
+      .branch-location {
+        font-size: 1rem;
+        color: #555;
+      }
+  
+      .branch-zipcode {
+        font-size: 1rem;
+        color: #777;
+      }
+    }
+  }
+  
+  
+  .footer-right {
+    width: 45%;
+    height: 300px;
+  }
+  
 }
 
 

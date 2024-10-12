@@ -10,13 +10,19 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProductsComponent {
 
+  products: Product[] = [];
+  currentPage = 1;
+  itemsPerPage = 10;
+  totalProducts: number = 0;
+  paginatedProducts: Product[] = [];
+  mapCenter = { lat: 40.748817, lng: -73.985428 };
+  zoomLevel = 14;
   socialMediaLinks = [
     { label: 'Facebook', icon: 'facebook', url: 'https://facebook.com' },
     { label: 'Email', icon: 'email-sign', url: 'https://email.com' },
     { label: 'Instagram', icon: 'instagram', url: 'https://instagram.com' },
     { label: 'YouTube', icon: 'YouTube', url: 'https://youtube.com' },
   ];
-
   tabs: Tabs[] = [
     {
       label: 'Edit Profile',
@@ -47,8 +53,6 @@ export class ProductsComponent {
       className: 'gallery'
     },
   ];
-
-  products: Product[] = [];
   private unsubscribe$ = new Subject<void>();
 
   constructor(private productsService: ProductsService) { }
@@ -61,11 +65,24 @@ export class ProductsComponent {
       )
       .subscribe((data: Product[]) => {
         this.products = data;
+        this.totalProducts = this.products.length;
+        this.paginateProducts();
       });
   }
 
   switchTab(tab: Tabs) {
     console.log(tab);
+  }
+
+  paginateProducts(): void {
+    const start = (this.currentPage - 1) * this.itemsPerPage;
+    const end = start + this.itemsPerPage;
+    this.paginatedProducts = this.products.slice(start, end);
+  }
+
+  onPageChange(newPage: number): void {
+    this.currentPage = newPage;
+    this.paginateProducts(); // Update the products displayed based on the new page
   }
 
   ngOnDestroy(): void {

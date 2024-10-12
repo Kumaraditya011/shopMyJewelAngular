@@ -52,47 +52,335 @@
         "label": "Artistic Gold Necklace",
         "weight": "35g",
         "cost": "2,38,350",
-        "views": 135,
-        "likes": 24
+        "views": 1351,
+        "likes": 241
     },
     {
         "image": "assets/images/necklace-small.png",
         "label": "Artistic Gold Necklace",
         "weight": "35g",
         "cost": "2,38,350",
-        "views": 135,
-        "likes": 24
+        "views": 1352,
+        "likes": 242
     },
     {
         "image": "assets/images/necklace-small.png",
         "label": "Artistic Gold Necklace",
         "weight": "35g",
         "cost": "2,38,350",
-        "views": 135,
-        "likes": 24
+        "views": 1353,
+        "likes": 243
     },
     {
         "image": "assets/images/necklace-small.png",
         "label": "Artistic Gold Necklace",
         "weight": "35g",
         "cost": "2,38,350",
-        "views": 135,
-        "likes": 24
+        "views": 1355,
+        "likes": 245
     },
     {
         "image": "assets/images/necklace-small.png",
         "label": "Artistic Gold Necklace",
         "weight": "35g",
         "cost": "2,38,350",
-        "views": 135,
-        "likes": 24
+        "views": 1356,
+        "likes": 246
     },
     {
         "image": "assets/images/necklace-small.png",
         "label": "Artistic Gold Necklace",
         "weight": "35g",
         "cost": "2,38,350",
-        "views": 135,
-        "likes": 24
+        "views": 1357,
+        "likes": 247
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1358,
+        "likes": 248
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1359,
+        "likes": 249
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1350,
+        "likes": 240
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1135,
+        "likes": 124
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 2135,
+        "likes": 224
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 3135,
+        "likes": 324
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 4135,
+        "likes": 424
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 5135,
+        "likes": 524
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 6135,
+        "likes": 624
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 7135,
+        "likes": 724
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 8135,
+        "likes": 824
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 9135,
+        "likes": 924
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1135,
+        "likes": 214
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1235,
+        "likes": 224
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1335,
+        "likes": 234
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1435,
+        "likes": 244
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1535,
+        "likes": 254
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1635,
+        "likes": 264
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1735,
+        "likes": 274
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1835,
+        "likes": 284
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1935,
+        "likes": 294
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1035,
+        "likes": 204
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1135,
+        "likes": 214
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1335,
+        "likes": 234
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1535,
+        "likes": 254
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1315,
+        "likes": 524
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1352,
+        "likes": 249
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1335,
+        "likes": 240
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1355,
+        "likes": 2489
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1325,
+        "likes": 241
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1335,
+        "likes": 244
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1356,
+        "likes": 243
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1345,
+        "likes": 246
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1359,
+        "likes": 247
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1353,
+        "likes": 241
+    },
+    {
+        "image": "assets/images/necklace-small.png",
+        "label": "Artistic Gold Necklace",
+        "weight": "35g",
+        "cost": "2,38,350",
+        "views": 1352,
+        "likes": 26
     }
 ]

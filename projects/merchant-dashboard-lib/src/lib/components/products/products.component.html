@@ -57,7 +57,7 @@
 
         We are the most famous Jewellers in New York with three more branches across the city.
         Our expansion is ongoing worldwide, and we are committed to providing exceptional quality.
-        <br/> <br/>
+        <br /> <br />
         We are the most famous Jewellers in New York with three more branches across the city.
         Our expansion is ongoing worldwide, and we are committed to providing exceptional quality.
       </p>
@@ -74,9 +74,47 @@
   </section>
   <section class="merchant-product-lists">
     <div class="product-grid">
-      <ng-container *ngFor="let product of products">
+      <ng-container *ngFor="let product of paginatedProducts">
         <lib-product-list [product]="product"></lib-product-list>
       </ng-container>
     </div>
   </section>
+  <section class="merchant-pagination">
+    <app-pagination [totalItems]="totalProducts" [itemsPerPage]="itemsPerPage" [currentPage]="currentPage" [backgroundColor]="'#4CAF50'"
+      [textColor]="'#ffffff'" (pageChange)="onPageChange($event)">
+    </app-pagination>
+  </section>
+  <footer class="merchant-footer">
+    <div class="footer-left">
+      <h3>Other Branches</h3>
+      <div class="branches">
+        <div class="branch">
+          <span class="branch-name">Mark Jewellers</span>
+          <span class="branch-location">New York, America</span>
+          <span class="branch-zipcode">94632</span>
+        </div>
+        <div class="branch">
+          <span class="branch-name">Mark Jewellers</span>
+          <span class="branch-location">New York, America</span>
+          <span class="branch-zipcode">94632</span>
+        </div>
+        <div class="branch">
+          <span class="branch-name">Mark Jewellers</span>
+          <span class="branch-location">New York, America</span>
+          <span class="branch-zipcode">94632</span>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="footer-right">
+      <lib-merchant-map 
+        [height]="'300px'" 
+        [width]="'100%'" 
+        [center]="mapCenter" 
+        [zoom]="zoomLevel"
+        [label]="'Shop Location'">
+      </lib-merchant-map>
+    </div>
+  </footer>
 </section>
